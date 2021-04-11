@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "1f17c6e5-69d0-4e92-bca7-aee19a6d5875",
+		"name": "Fipe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 Lista marcas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://veiculos.fipe.org.br/api/veiculos//ConsultarMarcas?codigoTabelaReferencia=267&codigoTipoVeiculo=1",
+					"protocol": "https",
+					"host": [
+						"veiculos",
+						"fipe",
+						"org",
+						"br"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						"",
+						"ConsultarMarcas"
+					],
+					"query": [
+						{
+							"key": "codigoTabelaReferencia",
+							"value": "267"
+						},
+						{
+							"key": "codigoTipoVeiculo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 Listar modelos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://veiculos.fipe.org.br/api/veiculos//ConsultarModelos?codigoTipoVeiculo=1&codigoTabelaReferencia=267&codigoMarca=13",
+					"protocol": "https",
+					"host": [
+						"veiculos",
+						"fipe",
+						"org",
+						"br"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						"",
+						"ConsultarModelos"
+					],
+					"query": [
+						{
+							"key": "codigoTipoVeiculo",
+							"value": "1"
+						},
+						{
+							"key": "codigoTabelaReferencia",
+							"value": "267"
+						},
+						{
+							"key": "codigoMarca",
+							"value": "13",
+							"description": "Citroen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 Listar ano modelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://veiculos.fipe.org.br/api/veiculos//ConsultarAnoModelo?codigoTipoVeiculo=1&codigoTabelaReferencia=267&codigoMarca=13&codigoModelo=347",
+					"protocol": "https",
+					"host": [
+						"veiculos",
+						"fipe",
+						"org",
+						"br"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						"",
+						"ConsultarAnoModelo"
+					],
+					"query": [
+						{
+							"key": "codigoTipoVeiculo",
+							"value": "1"
+						},
+						{
+							"key": "codigoTabelaReferencia",
+							"value": "267"
+						},
+						{
+							"key": "codigoMarca",
+							"value": "13"
+						},
+						{
+							"key": "codigoModelo",
+							"value": "347"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 Consulta com todos parametros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://veiculos.fipe.org.br/api/veiculos//ConsultarValorComTodosParametros?&codigoTabelaReferencia=267&codigoMarca=13&codigoModelo=347&codigoTipoVeiculo=1&anoModelo=2009&codigoTipoCombustivel=1&tipoVeiculo=carro&tipoConsulta=tradicional",
+					"protocol": "https",
+					"host": [
+						"veiculos",
+						"fipe",
+						"org",
+						"br"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						"",
+						"ConsultarValorComTodosParametros"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "codigoTabelaReferencia",
+							"value": "267"
+						},
+						{
+							"key": "codigoMarca",
+							"value": "13"
+						},
+						{
+							"key": "codigoModelo",
+							"value": "347"
+						},
+						{
+							"key": "codigoTipoVeiculo",
+							"value": "1"
+						},
+						{
+							"key": "anoModelo",
+							"value": "2009"
+						},
+						{
+							"key": "codigoTipoCombustivel",
+							"value": "1"
+						},
+						{
+							"key": "tipoVeiculo",
+							"value": "carro"
+						},
+						{
+							"key": "tipoConsulta",
+							"value": "tradicional"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
