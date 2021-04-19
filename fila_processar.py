@@ -39,7 +39,11 @@ try:
         # grava no disco, pra poder ficar sempre up to date.
         df.to_csv('final.csv', index=False)
         
-        sleep(randint(0,3))
+        sleep(1)
+        # sleep(randint(0,2))
+        
+        if i % 100 == 0:
+            sleep(30)
        
 except Exception as e:
     print('algum BO', e)
