@@ -1,6 +1,6 @@
 # fipe 
 
-A ideia desse projetinho é poder consultar os dados de todos os veículos da tabela FIPE.
+A ideia desse projetinho é consultar os dados de todos os veículos da tabela FIPE. Os dados são retornados em um DataFrame do Pandas para que seja fácil carregar em outro lugar.
 
 ## Ambiente
 
