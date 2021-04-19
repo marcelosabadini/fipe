@@ -20,7 +20,7 @@ Optei em fazer dessa forma para conseguir rodar em partes e caso de algum proble
 - Executar a fila com `fila_processar.py`. A cada request os dados dos veículos serão salvos em `final.csv`
 - Caso ocorra algum problema e o script pare, não fique preocupado. O `fila_processar.py` faz um JOIN com o que já processou e continua o trabalho de onde parou :)
 
-![DEMO](img/demo.PNG)
+![DEMO](img/demo.png)
 
 ## Mais
 
