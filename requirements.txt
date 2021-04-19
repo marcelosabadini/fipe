@@ -1,2 +1,3 @@
 pandas
 fake-headers
+tqdm
