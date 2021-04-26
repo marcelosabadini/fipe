@@ -41,11 +41,10 @@ try:
         # grava no disco, pra poder ficar sempre up to date.
         final.to_csv('final.csv', index=False)
         
-        sleep(1)
-        # sleep(randint(0,2))
+        sleep(randint(1,2))
         
-        # A cada 50 requests vamos deixar o servidor descansar
-        if i % 50 == 0:
+        # A cada 30 requests vamos deixar o servidor descansar
+        if i % 30 == 0:
             sleep(30)
        
 except Exception as e:
