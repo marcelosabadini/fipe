@@ -1,0 +1,1 @@
+bq load --project_id=acn-itau-fcvs --field_delimiter="," --autodetect --source_format=CSV antifraude.fipe_stage final.csv

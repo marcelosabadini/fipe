@@ -23,8 +23,12 @@ try:
     # join entre fila -> final
     fila = pd.merge(fila, final, on='url', how='outer', indicator=True)
     
+    print('\nFila:', len(fila), 'Processado: ', len(final), end=', ')
+    
     # separa somente o que esta no lado esquerdo, ou seja, na fila e que ainda nao foi consultado
     fila = fila[fila['_merge'] == 'left_only']
+    
+    print('Falta: ', len(fila))
     
     for i, row in fila.iterrows():
         
