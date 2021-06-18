@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import sys
+import datetime
 from time import sleep
 from fake_headers import Headers
 
@@ -9,17 +10,22 @@ header = Headers(
 )
 
 host         = 'https://veiculos.fipe.org.br/api/veiculos/'
-referencia   = [271]
+
+today      = datetime.datetime.now()
+base_date  = datetime.datetime(2021, 6,1)
+reference  = (271 + (today.year - base_date.year) * 12 + (today.month - base_date.month))
+
+referencia   = [reference]
 veiculo_tipo = [1] # , 2, 3
 
 fila  = pd.DataFrame()
 i = 0
 
-for tabela_referencia in referencia:
+try:
 
-    for tipo in veiculo_tipo:
-        
-        try:
+    for tabela_referencia in referencia:
+
+        for tipo in veiculo_tipo:        
         
             url = f"{host}/ConsultarMarcas?codigoTabelaReferencia={tabela_referencia}&codigoTipoVeiculo={tipo}"    
             r_marcas = requests.post(url, headers=header.generate()).json()
@@ -45,11 +51,12 @@ for tabela_referencia in referencia:
                         
                         fila = fila.append({'url': url_completa}, ignore_index=True)
                         
+                        sleep(2)
+                        
                 fila.to_csv('fila.csv', index=False)
-                
-                sleep(5)
-                
-            sleep(8)
                     
-        except Exception as e:
-            print('algum BO', e)
+                sleep(15)
+                    
+except Exception as e:
+    print('algum BO', e)
+    pass

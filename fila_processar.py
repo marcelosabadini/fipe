@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests
 import pandas as pd
 import sys
@@ -53,3 +54,4 @@ try:
        
 except Exception as e:
     print('algum BO', e)
+    pass
